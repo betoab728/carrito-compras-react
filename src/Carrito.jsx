@@ -7,12 +7,13 @@ import { Navigate } from 'react-router-dom'
 import { ProductosProvider } from './context/ProductosProvider'
 import { CarritoProvider } from './context/CarritoProvider'
 
+
 export const Carrito = () => {
   return (
     < ProductosProvider > 
     <CarritoProvider>
     <Navbar></Navbar>
-    <div className='container'>
+    <div className='container' >
   
         <Routes>
 

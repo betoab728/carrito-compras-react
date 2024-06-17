@@ -1,6 +1,7 @@
 import { Card } from '../componentes/Card'
 import React, { useContext } from 'react'
 import { ProductoContext } from '../context/ProductoContext'
+import { CarritoContext } from '../context/CarritoContext'
 
 export const Compras = () => {
 
@@ -17,6 +18,7 @@ export const Compras = () => {
     }
     const handleDisminuir=(id)=>{
 
+        
     }
     const handleAumentar=(id)=>{
 
@@ -26,11 +28,15 @@ export const Compras = () => {
   return (
    <>   
 
-   <h1>Compras</h1> 
+   <h1>Productos</h1> 
    <hr />
+   <div className='grilla'>
+
+   
    {productos.map(producto => (
 
     <Card key={producto.id}
+   
        imagen={producto.image} 
        titulo={producto.title}
        descripcion={producto.description}
@@ -40,8 +46,8 @@ export const Compras = () => {
      
       
     ></Card>
-
-   ))}
+    
+   ))} </div>
    </>
   )
 }
